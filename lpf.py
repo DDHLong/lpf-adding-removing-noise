@@ -7,8 +7,8 @@ import contextlib
 import warnings
 warnings.simplefilter("ignore", DeprecationWarning)
 
-fname = 'input_with_noise2.wav'
-outname = 'output.wav'
+fname = 'sound/input_with_noise2.wav'
+outname = 'sound/output.wav'
 
 cutOffFrequency = 100.0
 

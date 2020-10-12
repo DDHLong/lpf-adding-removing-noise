@@ -21,7 +21,7 @@ def get_white_noise(signal,SNR) :
 def to_polar(complex_ar):
     return np.abs(complex_ar),np.angle(complex_ar)
 
-signal_file = 'D:/Coding stuff/DSP/input.wav'
+signal_file = 'sound/input.wav'
 signal, sr = librosa.load(signal_file)
 signal=np.interp(signal, (signal.min(), signal.max()), (-1, 1))
 noise=get_white_noise(signal,SNR=10)
@@ -41,4 +41,4 @@ plt.xlabel("Sample number")
 plt.ylabel("Amplitude")
 plt.show()
 
-write("D:/Coding stuff/DSP/input_with_noise.wav",sr,signal_noise)
+write("sound/input_with_noise.wav",sr,signal_noise)
